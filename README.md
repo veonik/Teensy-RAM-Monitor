@@ -29,7 +29,7 @@ Download a zip of the repository, then include it from the Arduino IDE.
 Usage
 -----
 
-See [examples/simple/RamMonitorExample.ino] for an example sketch.
+See [RamMonitorExample.ino](examples/simple/RamMonitorExample.ino) for an example sketch.
 
 
 More information
