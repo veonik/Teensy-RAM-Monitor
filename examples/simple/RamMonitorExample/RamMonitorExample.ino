@@ -12,7 +12,7 @@ void report_ram_stat(const char* aname, uint32_t avalue) {
   Serial.print(" Kb (");
   Serial.print((((float) avalue) / ram.total()) * 100, 1);
   Serial.println("%)");
-};
+}
 
 void report_ram() {
   bool lowmem;
@@ -33,10 +33,10 @@ void report_ram() {
       Serial.println("**warning: stack and heap crash possible");
     else if(lowmem)
       Serial.println("**warning: unallocated memory running low");
-  };
+  }
   
   Serial.println();
-};
+}
 
 void setup() {
   ram.initialize();
@@ -44,7 +44,7 @@ void setup() {
   while(!Serial);
   
   reportTime = millis();
-};
+}
 
 void loop() {
   uint32_t time = millis();
@@ -52,9 +52,9 @@ void loop() {
   if((time - reportTime) > 2000) {
     reportTime = time;
     report_ram();
-  };
+  }
   
   ram.run();
-};
+}
 
 
