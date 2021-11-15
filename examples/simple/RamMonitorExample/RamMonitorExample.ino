@@ -3,7 +3,7 @@
 #include "RamMonitor.h"
 
 RamMonitor ram;
-uint32_t   reporttime;
+uint32_t   reportTime;
 
 void report_ram_stat(const char* aname, uint32_t avalue) {
   Serial.print(aname);
@@ -43,14 +43,14 @@ void setup() {
   
   while(!Serial);
   
-  reportime = millis();
+  reportTime = millis();
 };
 
 void loop() {
   uint32_t time = millis();
   
-  if((time - reporttime) > 2000) {
-    reporttime = time;
+  if((time - reportTime) > 2000) {
+    reportTime = time;
     report_ram();
   };
   
